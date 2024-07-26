@@ -7,5 +7,17 @@ pipeline {
       }
     }
 
+    stage('Terraforminit') {
+      steps {
+        bat(script: 'terraform init', label: 'helllo')
+      }
+    }
+
+    stage('deploy') {
+      steps {
+        bat 'echo %deploy%'
+      }
+    }
+
   }
 }
