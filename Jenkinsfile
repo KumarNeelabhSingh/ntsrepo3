@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('stage1') {
             steps {
-                echo 'Hello World'
+                git branch: 'main', credentialsId: '5607b0c6-4f3f-499c-a865-c8aedadf9868', url: 'https://github.com/KumarNeelabhSingh/ntsrepo3'
             }
         }
 		stage('stage2') {
             steps {
-                echo 'Hello World'
+                bat 'terraform init'
             }
         }
 		stage('stage3') {
